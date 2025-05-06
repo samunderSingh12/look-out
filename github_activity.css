@@ -1,37 +1,61 @@
 /* github_activity.css */
 
 Screen {
-    /* You could add global settings here, but defaults are often fine */
+    /* Layout for Header, TabbedContent, Status Bar, Footer */
+    layout: vertical;
 }
 
-/* Container for the main content area */
-#activity-container {
-    /* Add some padding around the log and loading indicator */
-    padding: 1;
+Header {
+    dock: top;
+}
+
+Footer {
+    dock: bottom;
+}
+
+TabbedContent {
+    /* Allow tab content to take remaining space */
+    height: 1fr;
+}
+
+/* Style the container holding the main content (now the TabPane) */
+TabPane {
+    padding: 0 1; /* Add horizontal padding */
 }
 
 /* Style the loading indicator spinner */
-#loading {
-    dock: top;           /* Place it at the top of its container (#activity-container) */
-    height: 1;           /* Ensure it takes up one line */
-    width: 3;            /* Standard spinner width */
-    margin-bottom: 1;    /* Add space below the spinner when visible */
-    color: $accent;      /* Use the accent color for the spinner */
-    /* display: is controlled by the Python code (reactive variable) */
+#main-loading {
+    dock: top;
+    height: 1;
+    width: 3;
+    /* margin: 0 auto; /* <--- REMOVED THIS LINE - 'auto' is invalid */
+    color: $accent;
+    /* display: is controlled by Python code */
 }
 
-
-/* Style the Log widget where activity is displayed */
-GitHubActivityLog {
-    /* Basic border style and color */
-    border: round $accent; /* We ONLY set the border style/color here */
-
-    /* Title was removed as it's not supported in init */
-
-    /* Make the log widget fill the available vertical space in its container */
-    height: 100%;
+/* Style the Log widget (used for Activity) */
+#activity-log {
+    border: round $accent;
+    height: 100%; /* Fill the TabPane */
 }
 
-/* You could add styles for Header or Footer if needed */
-/* Header { } */
-/* Footer { } */
+/* Style the ListViews (used for Notifications, Repos) */
+ListView {
+     border: round $accent;
+     height: 100%; /* Fill the TabPane */
+}
+
+/* Add some spacing within list items */
+ListItem {
+    padding: 0 1;
+}
+
+/* Style the status bar */
+#status-bar {
+    dock: bottom;
+    width: 100%;
+    height: 1;
+    background: $accent-darken-2;
+    color: $text;
+    padding: 0 1;
+}
