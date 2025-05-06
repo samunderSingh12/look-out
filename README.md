@@ -4,10 +4,9 @@ A Terminal User Interface (TUI) for interacting with GitHub, built with Python a
 
 ## Screenshot
 
-*(Current state showing the blank tab issue)*
 
 ![Screenshot of GitHub TUI showing tabs but blank content area](screen.jpg)
-*(Replace placeholder_screenshot.png with an actual screenshot like the one you provided)*
+
 
 ## Features
 
@@ -169,4 +168,4 @@ Please provide a clear description of the problem you're solving or the feature 
 
 ## License
 
-[MIT License] *(You can choose a license, MIT is a common permissive one. Create a LICENSE file if you choose one.)*
+[MIT License]
