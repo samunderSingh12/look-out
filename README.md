@@ -6,7 +6,7 @@ A Terminal User Interface (TUI) for interacting with GitHub, built with Python a
 
 *(Current state showing the blank tab issue)*
 
-![Screenshot of GitHub TUI showing tabs but blank content area](placeholder_screenshot.png)
+![Screenshot of GitHub TUI showing tabs but blank content area](placeholder_screen.jpg)
 *(Replace placeholder_screenshot.png with an actual screenshot like the one you provided)*
 
 ## Features
