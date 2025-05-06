@@ -1,0 +1,37 @@
+/* github_activity.css */
+
+Screen {
+    /* You could add global settings here, but defaults are often fine */
+}
+
+/* Container for the main content area */
+#activity-container {
+    /* Add some padding around the log and loading indicator */
+    padding: 1;
+}
+
+/* Style the loading indicator spinner */
+#loading {
+    dock: top;           /* Place it at the top of its container (#activity-container) */
+    height: 1;           /* Ensure it takes up one line */
+    width: 3;            /* Standard spinner width */
+    margin-bottom: 1;    /* Add space below the spinner when visible */
+    color: $accent;      /* Use the accent color for the spinner */
+    /* display: is controlled by the Python code (reactive variable) */
+}
+
+
+/* Style the Log widget where activity is displayed */
+GitHubActivityLog {
+    /* Basic border style and color */
+    border: round $accent; /* We ONLY set the border style/color here */
+
+    /* Title was removed as it's not supported in init */
+
+    /* Make the log widget fill the available vertical space in its container */
+    height: 100%;
+}
+
+/* You could add styles for Header or Footer if needed */
+/* Header { } */
+/* Footer { } */
